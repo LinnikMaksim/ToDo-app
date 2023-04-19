@@ -1,0 +1,25 @@
+.MySelect {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-color: inherit;
+  color: inherit;
+  border: 2px solid rgba(0, 0, 0, 0.279);
+  padding: 5px 10px;
+  border-radius: 10px 10px 0 0;
+  transition: 0.3s;
+}
+.MySelect:hover {
+  background-color: rgba(103, 103, 103, 0.523);
+}
+.Options {
+  background-color: #202124;
+}
+.MySelect:focus-visible {
+  outline: none;
+}
+@media (max-width: 850px) {
+  .MySelect {
+    font-size: 12px;
+    max-width: 115px;
+  }
+} ;

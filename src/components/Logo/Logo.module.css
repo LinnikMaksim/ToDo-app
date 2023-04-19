@@ -1,0 +1,120 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 40px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  pointer-events: none;
+  max-width: 120px;
+}
+.Togear {
+  width: 40px;
+  height: 40px;
+}
+.Dogear {
+  width: 50px;
+  height: 50px;
+}
+
+.to__wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-end;
+}
+.do__wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-end;
+}
+.Togear__center {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 75%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: background-color 0.5s ease-in-out;
+  z-index: 5;
+}
+.Dogear__center {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 72%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: background-color 0.5s ease-in-out;
+  z-index: 5;
+}
+.green {
+  animation: blink-green 0.5s linear;
+  animation-fill-mode: forwards;
+}
+.red {
+  animation: blink-red 0.5s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes blink-green {
+  0% {
+    background-color: transparent;
+    border: transparent;
+  }
+  50% {
+    background-color: rgba(18, 240, 18, 0.569);
+    border: 2px solid rgb(165, 255, 165);
+  }
+  100% {
+    background-color: transparent;
+    border: transparent;
+  }
+}
+
+@keyframes blink-red {
+  0% {
+    background-color: transparent;
+    border: transparent;
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.575);
+    border: 2px solid rgb(255, 126, 126);
+  }
+  100% {
+    background-color: transparent;
+    border: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Dogear {
+    animation: logo-spinB infinite 20s linear;
+  }
+  .Togear {
+    animation: logo-spinT infinite 20s linear;
+  }
+}
+
+@keyframes logo-spinT {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes logo-spinB {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(380deg);
+  }
+}

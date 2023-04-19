@@ -1,0 +1,68 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 35px;
+  padding: 0 20px;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.active .line {
+  scale: 1;
+  transition: all 0.2s;
+}
+.score {
+  position: absolute;
+  top: 6px;
+  right: -15px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 4px;
+  background-color: rgba(79, 0, 0, 0.5);
+  transition: all 0.2s;
+}
+.item:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+.item:hover .score {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(79, 0, 0);
+}
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70px;
+  gap: 8px;
+  padding: 8px 0;
+  transition: all 0.3s;
+}
+.line {
+  position: absolute;
+  bottom: 10px;
+  width: 15px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 2px;
+  scale: 0;
+}
+.active {
+  color: rgba(255, 255, 255, 0.95);
+}
+.active .score {
+  background-color: rgb(79, 0, 0);
+}

@@ -1,0 +1,40 @@
+.wrap {
+  position: relative;
+}
+.label {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-size: 20px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+.MyInput {
+  min-width: 300px;
+  margin-top: 25px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(255, 250, 240, 0.466);
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Poppins", sans-serif;
+  color: floralwhite;
+  background-color: inherit;
+  padding: 0 10px;
+  transition: 0.3s;
+}
+.wrap .MyInput:focus ~ label {
+  top: 0;
+}
+.wrap .MyInput:valid ~ label {
+  top: 0;
+}
+@media (max-width: 850px) {
+  .MyInput {
+    min-width: 200px;
+    font-size: 14px;
+  }
+  .label {
+    font-size: 14px;
+  }
+}

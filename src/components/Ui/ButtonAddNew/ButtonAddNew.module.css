@@ -1,0 +1,65 @@
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.wrap label {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.wrap:hover label {
+  color: rgb(255, 255, 255);
+}
+.btn {
+  position: relative;
+  background-color: inherit;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+.btn:hover .center {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 1;
+}
+.btnImg {
+  width: 60px;
+  height: 60px;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2px 10px;
+  width: 44px;
+  height: 44px;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  opacity: 0;
+  font-size: 40px;
+  line-height: 40px;
+  transition: all 0.3s;
+  align-items: center;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btnImg {
+    animation: btn-spin infinite 20s linear;
+  }
+}
+@keyframes btn-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

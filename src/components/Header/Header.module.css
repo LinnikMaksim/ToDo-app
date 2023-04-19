@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: rgba(187, 255, 251, 0.059);
+}
+@media (max-width: 630px) {
+  .header {
+    max-width: 340px;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+}
